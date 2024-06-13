@@ -1,8 +1,10 @@
 {% extends 'Timestamp/base.html'%}
 {%block content%} 
     <h2 id="Title">TIMESTAMP</h2>
-    <form action="">
+    <form method="post" action="hours-manager/">
         <label for="num_hours">Hours Worked</label>
-        <input required maxlength="100" name="num_hours" id="num_hours" type="text">
+        {% csrf_token %}
+        {{ form }}
+        <input  required maxlength="100" name="num_hours" id="num_hours" type="text">
     </form>
 {%endblock%}
