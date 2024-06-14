@@ -1,21 +1,19 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from .forms import hm_hours
+from .models import Work_Day
+import datetime
 
 # Create your views here.
 def Home(request):
-    return render(request,'Timestamp/home.html')
+    return render(request,'Timestamp/home.html',)
 
 def Post(request):
-    return render(request,'Timestamp/hours.html')
+    return render(request,'Timestamp/hours.html',)
 
 
 def Hours(request):
     if request.method == "POST":
-        form = hm_hours(request.POST)
-        if form.is_valid():
-            return HttpResponseRedirect("")
-    else:
-        form = hm_hours()
 
-    return render(request,'Timestamp/hours.html',{"form":form})
+        workday = Work_Day.objects.create(time = request.POST['num_hours'], date = request.POST['date'])
+    return render(request,'Timestamp/hours.html',{"workday":workday.time,"workday_date":workday.date})

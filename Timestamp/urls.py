@@ -3,5 +3,5 @@ from . import views
 urlpatterns = [
     path('',views.Home),
     path('saved-hours/',views.Hours),
-    path('hours-manager/',views.Post),
+    path('hours-manager/',views.Hours),
 ]
