@@ -7,7 +7,7 @@ def Home(request):
     return render(request,'Timestamp/home.html')
 
 def Post(request):
-    return render(request,)
+    return render(request,'Timestamp/hours.html')
 
 
 def Hours(request):

@@ -4,7 +4,6 @@
     <form method="post" action="hours-manager/">
         <label for="num_hours">Hours Worked</label>
         {% csrf_token %}
-        {{ form }}
         <input  required maxlength="100" name="num_hours" id="num_hours" type="text">
     </form>
 {%endblock%}
