@@ -1,12 +1,11 @@
 {% extends 'Timestamp/base.html'%}
 {%block content%} 
-{% %}
     <h2 id="Title">TIMESTAMP</h2>
     <form method="post" action="hours-manager/">
         <label class="minor" for="num_hours">Hours Worked : </label>
         <label class="minor" for="date">Date : </label>
         {% csrf_token %}
-        <input class="minor"  required maxlength="100" name="num_hours" id="num_hours" type="text">
-        <input class="minor"  required maxlength="100" name="date" id="date" type="date">
+        <input  class="major"  required maxlength="100" name="num_hours" id="num_hours" type="text">
+        <input class="major"  required maxlength="100" name="date" id="date" type="date">
     </form>
 {%endblock%}

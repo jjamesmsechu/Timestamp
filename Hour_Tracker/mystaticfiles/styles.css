@@ -4,6 +4,11 @@
     font-size: 30px;
 }
 
+.major{
+  color: rgb(238, 9, 9);
+  margin-left: 70px;
+  font-size: 30px;
+}
 
 #Title { 
     color: rgb(241, 250, 250);

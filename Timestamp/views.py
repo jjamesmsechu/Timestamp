@@ -16,4 +16,4 @@ def Hours(request):
     if request.method == "POST":
 
         workday = Work_Day.objects.create(time = request.POST['num_hours'], date = request.POST['date'])
-    return render(request,'Timestamp/hours.html',{"workday":workday.time,"workday_date":workday.date})
+    return render(request,'Timestamp/hours.html',{"workday":workday})
