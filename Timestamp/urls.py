@@ -2,6 +2,6 @@ from django.urls import path
 from . import views
 urlpatterns = [
     path('',views.Home),
-    path('saved-hours/',views.Hours),
+    path('history/',views.Saved),
     path('hours-manager/',views.Hours),
 ]

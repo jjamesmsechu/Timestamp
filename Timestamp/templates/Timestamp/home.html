@@ -2,10 +2,14 @@
 {%block content%} 
     <h2 id="Title">TIMESTAMP</h2>
     <form method="post" action="hours-manager/">
-        <label class="minor" for="num_hours">Hours Worked : </label>
-        <label class="minor" for="date">Date : </label>
         {% csrf_token %}
-        <input  class="major"  required maxlength="100" name="num_hours" id="num_hours" type="text">
-        <input class="major"  required maxlength="100" name="date" id="date" type="date">
+        <label class="label" for="startime">Start Time</label>
+        <input class="input" name="startime" id="startime" type="time"><br>
+        <label class="label" for="endtimetime">End Time</label>
+        <input class="input" maxlength="100" name="endtime" id="endtime" type="time"><br>
+        <label class="label" for="date">Date : </label>
+        <input class="input_d" maxlength="100" name="date" id="date" type="date"><br>
+        <input type="submit" name="submit" id="submit-button"><br>
+        <a href="history/"><input type="button" name="See past hours history" id=""></a>
     </form>
 {%endblock%}

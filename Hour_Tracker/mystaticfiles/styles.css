@@ -1,13 +1,32 @@
 .minor {
-    color: white;
-    margin-left: 70px;
-    font-size: 30px;
+  color: white;
 }
 
-.major{
+
+
+
+.label {
+    color: white;
+    margin: 20px;
+    font-size: 30px;
+    align-items: center;
+
+
+}
+.input_d{
+  border: #030423;
   color: rgb(238, 9, 9);
   margin-left: 70px;
   font-size: 30px;
+  align-items: center;
+}
+
+.input{
+  border: #030423;
+  color: rgb(238, 9, 9);
+  margin-left: 70px;
+  font-size: 30px;
+  align-items: center;
 }
 
 #Title { 
