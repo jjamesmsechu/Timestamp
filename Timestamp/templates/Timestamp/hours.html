@@ -1,8 +1,8 @@
 {% extends 'Timestamp/base.html'%}
 {%block content%} 
     <h2 id="Title"> Hours</h2>
-    <h4 class="minor">{{workday.startime}}</h4>
-    <h4 class="minor">{{workday.endtime}}</h4>
-    <h4 class="minor">{{workday.date}}</h4>
-    <h1>{{time_diff}}</h1>
+    <h4 class="minor"> Proposed Startime : {{workday.startime}}</h4>
+    <h4 class="minor"> Proposed Endtime : {{workday.endtime}}</h4>
+    <h4 class="minor"> Proposed Date : {{workday.date}}</h4>
+    <h1 class="major">Total Time : {{time_diff}}</h1>
 {%endblock%}

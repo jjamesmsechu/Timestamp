@@ -2,7 +2,6 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from .models import Work_Day
 from datetime import timedelta, datetime , date 
-import time 
 from time import strptime
 
 # Create your views here.
@@ -27,6 +26,20 @@ def Hours(request):
         time_diff = timedelta(hours=time_diff2.tm_hour,minutes=time_diff2.tm_min) - timedelta(hours=time_diff.tm_hour, minutes=time_diff.tm_min)
         second = time_diff.total_seconds()
         workday = Work_Day.objects.create(seconds = second, startime = request.POST['startime'], endtime = request.POST['endtime'] , date = request.POST['date'], difference = str(time_diff))
+        return render(request,'Timestamp/hours.html',{"workday":workday,"time_diff": time_diff})
+    if request.method == "GET":
+        days = Work_Day.objects.all()
+        worklist = 0
+
+        for obj in days:
+            worklist += float(obj.seconds)
+
+        worklist = round(worklist/3600,2)
 
         
-    return render(request,'Timestamp/hours.html',{"workday":workday,"time_diff": time_diff})
+
+        
+            
+
+        return render(request,'Timestamp/saved.html',{'days':days, 'worklist':worklist})
+    

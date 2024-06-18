@@ -1,4 +1,16 @@
 {% extends 'Timestamp/base.html'%}
 {%block content%} 
-    <h1>saved content</h1>
+    <div class="grid-container">
+        {% for i in days %} 
+            <div class="box" class="grid-item">
+                <h2 class="white">Date : {{i.date}}<h2>
+                <h3 class="white">Start : {{i.startime}}<h3>
+                <h3 class="white">End : {{i.endtime}}<h3>
+                <h3 class="white">Total Hours : {{i.difference}}<h3>    
+            </div>   
+        {%endfor%}
+    </div>
+
+    <h5 id="Total">All Time Hours: {{worklist}}</h5>
+
 {%endblock%}
